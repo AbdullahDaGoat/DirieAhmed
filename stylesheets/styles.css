@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #4189DD;
+    color: #ffff;
+  }
+
+  a{
+    background: transparent;
+    color: lightgrey;
+  }
+
+  a:hover{
+    color: white;
+  }
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 30px;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li button {
+    text-decoration: none;
+    color: lightgrey;
+    transition: all 0.3s ease 0s;
+    font-size: 24px;
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li:hover button {
+    color: #fff;
+  }
+  
+  .content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .left-box {
+    flex: 0 0 auto;
+  }
+  
+  .left-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    -webkit-filter: grayscale(1%); /* Chrome, Safari, Opera */
+    filter: grayscale(1%);
+  }
+  
+  .right-box {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .content-box {
+    display: none;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  
+  .content-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .content-box p, ul, ol {
+    font-size: 24px;
+  }
+
+  
+
+  .slide-animation {
+    animation: slide-animation 0.5s ease-in-out;
+  }
+  
+  @keyframes slide-animation {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .show {
+    display: block !important;
+  }
+
+
+
+  .wrapper-body{
+    display:grid;
+    height:100%;
+    width: 100%;
+  }
+  .wrapper{
+    display:inline-flex;
+  }
+  .wrapper .icon{
+    margin: 0 20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position: relative;
+    z-index:2;
+  }
+  .wrapper .icon span{
+    position:relative;
+    z-index:2;
+    height: 60px;
+    width: 60px;
+    display:block;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    border-radius:50%;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span i{
+    font-size:25px;
+    line-height:60px;
+  }
+  .wrapper .icon .tooltip{
+    position:absolute;
+    top:0px;
+    left: -1rem;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    color:white;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip{
+    opacity:1;
+    pointer-events: auto;
+    top:-70px;
+  }
+  .wrapper .icon .tooltip:before{
+    position:absolute;
+    content:"";
+    height:15px;
+    width:15px;
+    bottom:-8px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .wrapper .icon:hover span,
+  .wrapp .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .facebook:hover span,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip:before{
+    background:#962fbf ;
+  }
+  .wrapper .twitter:hover span,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip:before{
+    background:#46C1F6;
+  }
+  .wrapper .github:hover span,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip:before{
+    background:#ff9800;
+  }
+  .wrapper .youtube:hover span,
+  .wrapper .youtube:hover .tooltip,
+  .wrapper .youtube:hover .tooltip:before{
+    background:#7289da;
+  }
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .footer__links a {
+    color: lightgrey;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .theme-toggle-button {
+    padding: 0.5em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;;
+    color: #fff;
+  }
+  
+  
+  .footer__dropdown {
+    position: relative;
+  }
+  
+  .footer__dropdown-content {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    min-width: 120px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+  }
+  
+  .footer__dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer__dropdown-content a:hover {
+    background-color: black;
+    color: white
+  }
+
+  .footer__dropdown-content.dark a:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .footer__dropdown:hover .footer__dropdown-content {
+    display: block;
+  }
+
+  body:hover > #trailer {
+    opacity: 1;
+  }
+  
+  #trailer {
+    height: 5px;
+    width: 5px;
+    background-color: white;
+    border-radius: 5px;
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+    
+    display: grid;
+    place-items: center;
+  }
+  
+  #trailer:not([data-type=""]) > #trailer-icon {
+    opacity: 1;
+  }
+  
+  #trailer-icon {
+    font-size: 6px;
+    line-height: 4px;
+    
+    opacity: 0;
+    transition: opacity 200ms ease;
+  }
+
+
+  .logo-dark.hide {
+    display: block !important;
+  }
+  
+  .logo-light.hide {
+    display: none !important;
+  }
+  
+  body.dark-mode {
+    background-color: #000;
+  }
+  
+  .slide-animation {
+    transition: all 0.5s ease-in-out;
+  }
