@@ -55,6 +55,10 @@ body {
   animation: slide 0.5s ease;
 }
 
+.btn-content.show:nth-child(4){
+  width: 5%:
+}
+
 .content h2 {
   font-size: 24px;
   margin-bottom: 10px;

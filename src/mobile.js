@@ -10,9 +10,13 @@ function checkWidth() {
   if (screenWidth >= phoneScreenWidth) {
     // Redirect to mobile.html
     window.location.href = "index.html";
-  } else {
+  } else if (screenWidth <= 400) {
+    alert("Your Screen Size might not fit for this website, we only support iphone XR and later including Android S8 and later")
+  }
+  
+  else {
     // Log message for desktop / tablet
-    console.log("Client is on Desktop / Tablet");
+    console.log("Client is on phone / mini Tablet");
   }
 }
 
